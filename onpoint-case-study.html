@@ -72,7 +72,7 @@
 
   /* HERO */
   .cs-hero {
-    padding: 140px 56px 80px;
+    padding: 140px 72px 80px;
     background: linear-gradient(160deg, #060B18 0%, #0E1D3C 50%, #1A3A8F 100%);
     position: relative;
     overflow: hidden;
@@ -154,7 +154,7 @@
   }
 
   /* BODY LAYOUT */
-  .cs-body { max-width: 1200px; margin: 0 auto; padding: 0 56px; }
+  .cs-body { max-width: 1200px; margin: 0 auto; padding: 0 72px; }
 
   /* SECTIONS */
   .cs-section {
@@ -470,8 +470,8 @@
   /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 14px 20px; }
-    .cs-hero { padding: 120px 20px 60px; }
-    .cs-body { padding: 0 20px; }
+    .cs-hero { padding: 120px 24px 60px; }
+    .cs-body { padding: 0 24px; }
     .cs-stats { grid-template-columns: repeat(2, 1fr); }
     .two-col, .two-col-wide { grid-template-columns: 1fr; gap: 32px; }
     .insight-row, .outcome-row { grid-template-columns: 1fr 1fr; }
@@ -919,11 +919,11 @@
   <p>I'm available for new projects and collaborations.</p>
   <div class="cs-footer-btns">
     <a href="index.html" class="btn-dark">← Back to Portfolio</a>
-    <a href="mailto:marinalisa2305@gmail.com" class="btn-outline">Get in Touch</a>
+    <a href="/cdn-cgi/l/email-protection#94f9f5e6fdfaf5f8fde7f5a6a7a4a1d4f3f9f5fdf8baf7fbf9" class="btn-outline">Get in Touch</a>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Progressive enhancement: only hide elements if JS works
   document.documentElement.classList.add('js');
   const reveals = document.querySelectorAll('.reveal');
@@ -932,13 +932,4 @@
   const io = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  
-  reveals.forEach(el => io.observe(el));
-</script>
-</body>
-</html>
+        setTimeout(() => entry.target.classList.add('visible'), i
