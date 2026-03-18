@@ -74,7 +74,7 @@
 
   /* HERO */
   .cs-hero {
-    padding: 140px var(--pad) 80px;
+    padding: 140px 0 80px;
     background: linear-gradient(160deg, #060B18 0%, #0E1D3C 50%, #1A3A8F 100%);
     position: relative;
     overflow: hidden;
@@ -96,7 +96,7 @@
     pointer-events: none;
   }
 
-  .cs-hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+  .cs-hero-inner { max-width: 1200px; margin: 0 auto; padding: 0 var(--pad); position: relative; z-index: 1; }
 
   .cs-meta {
     display: flex; gap: 8px; flex-wrap: wrap;
@@ -156,11 +156,11 @@
   }
 
   /* BODY LAYOUT */
-  .cs-body { max-width: 1200px; margin: 0 auto; padding: 0 var(--pad); }
+  .cs-body { max-width: 1200px; margin: 0 auto; padding: 0; }
 
   /* SECTIONS */
   .cs-section {
-    padding: 80px 0;
+    padding: 80px var(--pad);
     border-bottom: 1px solid var(--border);
   }
   .cs-section:last-child { border-bottom: none; }
@@ -472,8 +472,9 @@
   /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 14px var(--pad-m); }
-    .cs-hero { padding: 120px var(--pad-m) 60px; }
-    .cs-body { padding: 0 var(--pad-m); }
+    .cs-hero { padding: 120px 0 60px; }
+    .cs-hero-inner { padding: 0 var(--pad-m); }
+    .cs-section { padding: 80px var(--pad-m); }
     .cs-stats { grid-template-columns: repeat(2, 1fr); }
     .two-col, .two-col-wide { grid-template-columns: 1fr; gap: 32px; }
     .insight-row, .outcome-row { grid-template-columns: 1fr 1fr; }
@@ -515,6 +516,29 @@
   }
   @media (max-width: 700px) {
     .screen-img-grid { grid-template-columns: 1fr; }
+  }
+
+
+  /* Fallback padding for elements outside cs-section */
+  .cs-body > .decision-grid,
+  .cs-body > .screen-showcase,
+  .cs-body > .flow-container,
+  .cs-body > .outcome-row,
+  .cs-body > .learning-list,
+  .cs-body > .insight-row {
+    padding-left: var(--pad);
+    padding-right: var(--pad);
+  }
+  @media (max-width: 900px) {
+    .cs-body > .decision-grid,
+    .cs-body > .screen-showcase,
+    .cs-body > .flow-container,
+    .cs-body > .outcome-row,
+    .cs-body > .learning-list,
+    .cs-body > .insight-row {
+      padding-left: var(--pad-m);
+      padding-right: var(--pad-m);
+    }
   }
 
 </style>
@@ -690,7 +714,7 @@
       </div>
     </div>    </div>
 
-    <div class="decision-grid" style="margin-top: 24px;">
+    <div class="decision-grid" style="margin-top: 24px; padding-left: var(--pad); padding-right: var(--pad);">
       <div class="decision-card">
         <div class="decision-head">
           <div class="decision-number">01</div>
@@ -921,7 +945,7 @@
   <p>I'm available for new projects and collaborations.</p>
   <div class="cs-footer-btns">
     <a href="index.html" class="btn-dark">← Back to Portfolio</a>
-    <a href="/cdn-cgi/l/email-protection#94f9f5e6fdfaf5f8fde7f5a6a7a4a1d4f3f9f5fdf8baf7fbf9" class="btn-outline">Get in Touch</a>
+    <a href="/cdn-cgi/l/email-protection#1974786b70777875706a782b2a292c597e74787075377a7674" class="btn-outline">Get in Touch</a>
   </div>
 </footer>
 
