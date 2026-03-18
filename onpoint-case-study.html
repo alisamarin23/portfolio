@@ -9,6 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
 <style>
   :root {
+    --pad: 64px;
+    --pad-m: 24px;
     --ink: #0B0F1A;
     --white: #ffffff;
     --off: #F5F4F1;
@@ -46,7 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 18px 56px;
+    padding: 18px var(--pad);
     background: rgba(255,255,255,0.92);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
@@ -72,7 +74,7 @@
 
   /* HERO */
   .cs-hero {
-    padding: 140px 72px 80px;
+    padding: 140px var(--pad) 80px;
     background: linear-gradient(160deg, #060B18 0%, #0E1D3C 50%, #1A3A8F 100%);
     position: relative;
     overflow: hidden;
@@ -154,7 +156,7 @@
   }
 
   /* BODY LAYOUT */
-  .cs-body { max-width: 1200px; margin: 0 auto; padding: 0 72px; }
+  .cs-body { max-width: 1200px; margin: 0 auto; padding: 0 var(--pad); }
 
   /* SECTIONS */
   .cs-section {
@@ -439,7 +441,7 @@
   /* FOOTER */
   .cs-footer {
     background: var(--ink);
-    padding: 64px 56px;
+    padding: 64px var(--pad);
     text-align: center;
   }
   .cs-footer h3 {
@@ -469,15 +471,15 @@
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
-    nav { padding: 14px 20px; }
-    .cs-hero { padding: 120px 24px 60px; }
-    .cs-body { padding: 0 24px; }
+    nav { padding: 14px var(--pad-m); }
+    .cs-hero { padding: 120px var(--pad-m) 60px; }
+    .cs-body { padding: 0 var(--pad-m); }
     .cs-stats { grid-template-columns: repeat(2, 1fr); }
     .two-col, .two-col-wide { grid-template-columns: 1fr; gap: 32px; }
     .insight-row, .outcome-row { grid-template-columns: 1fr 1fr; }
     .decision-grid { grid-template-columns: 1fr; }
     .role-grid { grid-template-columns: 1fr; }
-    .cs-footer { padding: 48px 20px; }
+    .cs-footer { padding: 48px var(--pad-m); }
   }
   @media (max-width: 600px) {
     .insight-row, .outcome-row { grid-template-columns: 1fr; }
